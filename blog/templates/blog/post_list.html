@@ -1,23 +1,43 @@
 <html>
 <head>
-<title>Django Girls blog</title>
+	<title>Django Girls blog</title>
+	
+	<meta charset="utf-8">
+	<!-- For being responsive -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	
+  	<!-- CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	
+  	<!-- jQuery-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  	<!-- Bootstrap -->
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<div>
-<h1><a href="/">Django Girls Blog</a></h1>
+
+<div class="container-fluid">
+  <h1>Bootstrap + Django Page</h1>
+  <p>This is some text INSIDE of a bootstrp container.</p> 
 </div>
-<div>
-<p>published: 14.06.2014, 12:14</p>
-<h2><a href="">My first post</a></h2>
-<p>This is the second attempt to create a web site with django girls.
-following mentor advise, and applying scrum. little steps, but always wating to achieve a small goal.
-thanks mentor. thanks a.a.g.</p>
-</div>
-<div>
-<p>published: 14.06.2014, 12:14</p>
-<h2><a href="">My second post</a></h2>
-<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi po
-rta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-</div>
+
+	
+</head>
+<body>
+	{{ posts }}
+	<div>
+		<h1><a href="/">Django Girls Blog / outside of a container</a></h1>
+	</div>
+	<div>
+		{% for post in posts %}
+
+		<p>published: {{ post.published_date }}</p>
+		<h2><a href="">{{ post.title }}</a></h2>
+		<p>{{ post.text|linebreaksbr }}</p>
+		
+		{% endfor %}
+	</div>
 </body>
 </html>
