@@ -1,122 +1,147 @@
+{% load static %}
 <html>
 <head>
 	<title>Django Girls blog</title>
 	
 	<meta charset="utf-8">
 	<!-- For being responsive -->
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
   	<!-- CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  	
-  	<!-- jQuery-->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  	<!-- Bootstrap -->
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
 
+  <!-- jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <!-- Load Own CSS -->
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+  <!-- Fonts -->
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 </head>
 <body>
 	<div class="container-fluid">
-	<div>
-		<h1><a> Django Girls Tutorial </a></h1>
+		<div>
+			<h1><a> NLP Base camp for IT </a></h1>
+		</div>
+		<p>This page is a prove of concept.</p> 
+
+		<div class="form-group">
+			<label for="exampleFormControlTextarea1">Introduce description</label>
+			<textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+		</div>
+
+		<div class="form-group">
+			<label for="exampleFormControlTextarea2">Introduce claims</label>
+			<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Sent to backend</button>
+
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Claim nr</th>
+						<th scope="col">ftnr</th>
+						<th scope="col">Claim Txt</th>
+						<th scope="col">Join</th>
+						<th scope="col">Art. 54&56</th>
+						<th scope="col">Art. 123</th>
+						<th scope="col">D1</th>
+						<th scope="col">D2</th>
+						<th scope="col">D3</th>
+						<th scope="col">D4</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1</th>
+						<td>1</td>
+						<td>A car including wheels and painted white.</td>
+						<td>
+							<button type="submit" class="btn btn-primary">join</button>
+						</td>
+						<td>not new?</td>
+						<td>Added subject matter?</td>
+						<td>refs. in doc 1</td>
+						<td>refs. in doc 2</td>
+						<td>refs. in doc 3</td>
+						<td>refs. in doc 4</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>1</td>
+						<td>A car according to claim 1 including lights.</td>
+						<td>
+							<button type="submit" class="btn btn-primary">join</button>
+						</td>
+						<td>not new?</td>
+						<td>Added subject matter?</td>
+						<td>refs. in doc 1</td>
+						<td>refs. in doc 2</td>
+						<td>refs. in doc 3</td>
+						<td>refs. in doc 4</td>
+					</tr>
+					<tr>
+						<th scope="row">3</th>
+						<td>1</td>
+						<td>A car according to claim 1 or 2 including seats.</td>
+						<td>
+							<button type="submit" class="btn btn-primary">join</button>
+						</td>
+						<td>not new?</td>
+						<td>Added subject matter?</td>
+						<td>refs. in doc 1</td>
+						<td>refs. in doc 2</td>
+						<td>refs. in doc 3</td>
+						<td>refs. in doc 4</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
-	<div><a> This page/blog is being created following the </a></div>
-	<div><a href="https://tutorial.djangogirls.org">Django Girls tutorial</a></div><br />
-		<a> Many thanks to all the contributors of the tutorial </a>
-  <h1>Bootstrap + Django Page</h1>
-  <p>This page is a prove of concept. There is no JS yet behind any button</p> 
+
+	<div class="page-header">
+		<h1><a href="/">Django Girls Blog</a></h1>
 
 
-<div class="table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Claim nr</th>
-        <th scope="col">ftnr</th>
-        <th scope="col">Claim Txt</th>
-        <th scope="col">Join</th>
-        <th scope="col">Art. 54&56</th>
-        <th scope="col">Art. 123</th>
-        <th scope="col">D1</th>
-        <th scope="col">D2</th>
-        <th scope="col">D3</th>
-        <th scope="col">D4</th>
-        x
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>1</td>
-        <td>A car including wheels and painted white.</td>
-        <td>
-        	<button type="submit" class="btn btn-primary">join</button>
-        </td>
-        <td>not new?</td>
-        <td>Added subject matter?</td>
-        <td>refs. in doc 1</td>
-        <td>refs. in doc 2</td>
-        <td>refs. in doc 3</td>
-        <td>refs. in doc 4</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>1</td>
-        <td>A car according to claim 1 including lights.</td>
-        <td>
-        	<button type="submit" class="btn btn-primary">join</button>
-        </td>
-        <td>not new?</td>
-        <td>Added subject matter?</td>
-        <td>refs. in doc 1</td>
-        <td>refs. in doc 2</td>
-        <td>refs. in doc 3</td>
-        <td>refs. in doc 4</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>1</td>
-        <td>A car according to claim 1 or 2 including seats.</td>
-        <td>
-        	<button type="submit" class="btn btn-primary">join</button>
-        </td>
-        <td>not new?</td>
-        <td>Added subject matter?</td>
-        <td>refs. in doc 1</td>
-        <td>refs. in doc 2</td>
-        <td>refs. in doc 3</td>
-        <td>refs. in doc 4</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="form-group">
-  <label for="exampleFormControlTextarea1">Introduce description</label>
-  <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
-</div>
+		<div>
+			<a> This is what appears when reffering to posts coming from Django models:</a>
+			{{ posts }}
+		</div>
+		<a>If it does not appear anything is because the content of the local database is not yet in the server</a>
+		<div class="post">
+			{% for post in posts %}
 
-<div class="form-group">
-  <label for="exampleFormControlTextarea2">Introduce claims</label>
-  <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
-</div>
-	
-	<div>
-		<a> This is what appears when reffering to posts coming from Django models:</a>
-	{{ posts }}
+			<p>published: {{ post.published_date }}</p>
+			<h2><a href="">{{ post.title }}</a></h2>
+			<p>{{ post.text|linebreaksbr }}</p>
+			{% endfor %}
+		</div>
 	</div>
-	
-	<div>
-		{% for post in posts %}
 
-		<p>published: {{ post.published_date }}</p>
-		<h2><a href="">{{ post.title }}</a></h2>
-		<p>{{ post.text|linebreaksbr }}</p>
-
-		{% endfor %}
+	<div class="content container">
+		<div class="row">
+			<div class="col-md-8">
+				{% for post in posts %}
+				<div class="post">
+					<div class="date">
+						<p>published: {{ post.published_date }}</p>
+					</div>
+					<h2><a href="">{{ post.title }}</a></h2>
+					<p>{{ post.text|linebreaksbr }}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
 	</div>
-</div>
 </body>
 </html>
