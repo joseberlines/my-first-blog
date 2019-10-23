@@ -1,7 +1,7 @@
 {% load static %}
 <html>
 <head>
-	<title>NLP4IP</title>
+	<title>NLP 4 IP</title>
 	
 	<meta charset="utf-8">
 	<!-- For being responsive -->
@@ -29,7 +29,7 @@
 <body>
 	<div class="container-fluid">
 		<div>
-			<h2><a> Front End design</a></h2>
+			<h2><a>NLP 4 IP: Front End design</a></h2>
 		</div>
 		<p>This page is a concept-mock</p>
 		<hr/> 
@@ -71,14 +71,22 @@
 		</div>
 		<hr/>
 		<div>
-		<button type="submit" class="btn btn-primary" background-color="red"; >Generate features table</button>
-		
 		<button type="submit" class="btn btn-primary">Generate Reverse Concept Search</button>
-		
+		<hr/>
 		<button type="submit" class="btn btn-primary">Run tf-idf in comparison</button>
+		<p>I am currently working on generating the tf-idf matrix based on:</p>
+		<p>- 9650 concepts in 3 languages</p>
+		<p>- Around 50000 documents </p>
+		<hr/>
+		
+		</div>
+		
+		<button type="submit" class="btn btn-primary" background-color="red"; >Generate features table</button>
+		<p>Currently this feature works locally in EXCEL VBA based</p>
+		<p>Code is being translated from VBA to Pyhton</p>
+		<p>Python allow much faster programming of more complicated legal objections (Art. 82 EPC, Art. 83 EPC for instance) 
 		<hr/>
 		<p>The features table generated will look like this:</p>
-		</div>
 		<div class="table-responsive">
 			<table class="table">
 				<thead>
@@ -205,11 +213,17 @@
 			</table>
 		</div>
 	<hr/>
-	<button type="submit" class="btn btn-primary">GENERATE Report on Patentability</button>
+	<button type="submit" class="btn btn-primary">GENERATE Pre_Report on Patentability</button>
+	<p>Some info about the code behind Pre_report</p>
+	<p>- Code works already in EXCEL VBA </p>
+	<p>- Code being translated into python for Django backend</p>
+	<p>The generation is based on a collection of around 3000 paragrahs of texts from previous communications. In 3 languages EN, DE & FR</p>
+	<p>The paragraphs are organized in pandas DataFrame in 3 languages EN, DE & FR<p>
+	<p>Pandas versatility and speed allows for quasi instant generation from the user perspective based on features table user input.</p>
 	<br/>
 	<div class="form-group">
-			<label for="exampleFormControlTextarea2">This is the Report on Patentability</label>
-			<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Here the report on patentability should appear."></textarea>
+			<label for="exampleFormControlTextarea2">This is the PRE_Report on Patentability:</label>
+			<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Here the report on patentability should appear. Be aware, this report on patentability is a pre-repport and it might not be complete."></textarea>
 		</div>
 	<hr/>
 	<button type="button" class="btn btn-primary">Download Report in XML version</button>
