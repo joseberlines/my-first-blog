@@ -29,24 +29,29 @@
 <body>
 	<div class="container-fluid">
 		<div>
-			<h1><a> NLP Base camp for IP </a></h1>
+			<h2><a> NLP Base camp for IP </a></h2>
 		</div>
 		<p>This page is a prove of concept.</p>
 		<hr/> 
 		<div class="form-group">
+			<label for="exampleFormControlTextarea1">Number:</label>
+			<textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="1"  placeholder="Accesing the API to recover data for nest two fields"></textarea>
+		</div>
+		<div class="form-group">
 			<label for="exampleFormControlTextarea1">Introduce description</label>
-			<textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10"></textarea>
+			<textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="10" placeholder="Simply paste text here if API is not available"></textarea>
 		</div>
 
 		<div class="form-group">
 			<label for="exampleFormControlTextarea2">Introduce claims</label>
-			<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
+			<textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Simply paste text here if API is not available"></textarea>
 		</div>
 		<button type="submit" class="btn btn-primary">Sent to backend</button>
 		<br/>
 		<hr/>
 		<!-- LANGUAGE BUTTONS -->
 		<br/>
+		<p>Language automatically detected. Chage language of COMM if you wish</p>
 		<div class="btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="btn btn-secondary">English</button>
 			<button type="button" class="btn btn-secondary">German</button>
@@ -58,6 +63,7 @@
 		<hr/>
 		<!-- PROCESS BUTTONS -->
 		<br/>
+		<p>Choose the kind of communication you want to generate</p>
 		<div class="btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="btn btn-secondary">EPO</button>
 			<button type="button" class="btn btn-secondary">PCT</button>
@@ -69,7 +75,7 @@
 		
 		<button type="submit" class="btn btn-primary">Generate Reverse Concept Search</button>
 		
-		<button type="submit" class="btn btn-primary">Run Tf-idf in CLASS</button>
+		<button type="submit" class="btn btn-primary">Run tf-idf in comparison</button>
 		<hr/>
 		</div>
 		<div class="table-responsive">
@@ -80,6 +86,7 @@
 						<th scope="col">ftnr</th>
 						<th scope="col">Claim Txt</th>
 						<th scope="col">Join</th>
+						<th scope="col">Art. 84</th>
 						<th scope="col">Art. 54&56</th>
 						<th scope="col">Art. 123</th>
 						<th scope="col">D1</th>
@@ -92,10 +99,22 @@
 					<tr>
 						<th scope="row">1</th>
 						<td>1</td>
-						<td>A car including wheels and painted white.</td>
+						<td>A car including wheels and painted white</td>
 						<td>
 							<button type="submit" class="btn btn-primary">join</button>
 						</td>
+						<td>
+							<div class="dropdown">
+							  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Dropdown button
+							  </button>
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="#">Vague</a>
+							    <a class="dropdown-item" href="#">Result</a>
+							    <a class="dropdown-item" href="#">other</a>
+							  </div>
+							</div>
+					    </td>
 						<td>not new?</td>
 						<td>Added subject matter?</td>
 						<td>refs. in doc 1</td>
@@ -104,12 +123,50 @@
 						<td>refs. in doc 4</td>
 					</tr>
 					<tr>
-						<th scope="row">3</th>
+						<th scope="row">1</th>
+						<td>2</td>
+						<td>whereby the wheels are round</td>
+						<td>
+							<button type="submit" class="btn btn-primary">join</button>
+						</td>
+						<td>
+							<div class="dropdown">
+							  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Dropdown button
+							  </button>
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="#">Vague</a>
+							    <a class="dropdown-item" href="#">Result</a>
+							    <a class="dropdown-item" href="#">other</a>
+							  </div>
+							</div>
+					    </td>
+						<td>not new?</td>
+						<td>Added subject matter?</td>
+						<td>refs. in doc 1</td>
+						<td>refs. in doc 2</td>
+						<td>refs. in doc 3</td>
+						<td>refs. in doc 4</td>
+					</tr>
+					<tr>
+						<th scope="row">2</th>
 						<td>1</td>
 						<td>A car according to claim 1 including lights.</td>
 						<td>
 							<button type="submit" class="btn btn-primary">join</button>
 						</td>
+						<td>
+							<div class="dropdown">
+							  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Dropdown button
+							  </button>
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="#">Vague</a>
+							    <a class="dropdown-item" href="#">Result</a>
+							    <a class="dropdown-item" href="#">other</a>
+							  </div>
+							</div>
+					    </td>
 						<td>not new?</td>
 						<td>Added subject matter?</td>
 						<td>refs. in doc 1</td>
@@ -124,6 +181,18 @@
 						<td>
 							<button type="submit" class="btn btn-primary">join</button>
 						</td>
+						<td>
+							<div class="dropdown">
+							  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    Dropdown button
+							  </button>
+							  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+							    <a class="dropdown-item" href="#">Vague</a>
+							    <a class="dropdown-item" href="#">Result</a>
+							    <a class="dropdown-item" href="#">other</a>
+							  </div>
+							</div>
+					    </td>
 						<td>not new?</td>
 						<td>Added subject matter?</td>
 						<td>refs. in doc 1</td>
@@ -138,7 +207,7 @@
 	<button type="submit" class="btn btn-primary">GENERATE Report on Patentability</button>
 	<br/>
 	<hr/>
-	<button type="button" class="btn btn-primary">Download report in XML version</button>
+	<button type="button" class="btn btn-primary">Download Report in XML version</button>
 
 	<br/>
 
@@ -166,10 +235,16 @@
 		<label class="custom-control-label" for="defaultUnchecked">Spirit of the invention</label>
 	</div>
 
-	<!-- Default checked -->
-	<div class="custom-control custom-radio">
+	<!-- Default checked the name="defaultExampleRadios" is what links
+		the list of buttons-->
+	<div >
 		<input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
 		<label class="custom-control-label" for="defaultChecked">Incorporated by reference</label>
+	</div>
+
+	<div class="custom-control custom-radio">
+		<input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios" checked>
+		<label class="custom-control-label" for="defaultChecked">Prior art Mentioned</label>
 	</div>
 
 
